@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="impl">
+      <UniqueIdentifier>{d88faa0b-ee1c-453c-9098-4dd0b6a34898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="exports">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LoggerImpl.cpp">
+      <Filter>impl</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeUtility.cpp">
+      <Filter>impl</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggerExports.cpp">
+      <Filter>exports</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LoggerImpl.h">
+      <Filter>impl</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeUtility.h">
+      <Filter>impl</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowsSystemClock.h">
+      <Filter>impl</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggerExports.h">
+      <Filter>exports</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TimeUtility.inl">
+      <Filter>impl</Filter>
+    </None>
+  </ItemGroup>
+</Project>
