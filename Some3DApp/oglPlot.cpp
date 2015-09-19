@@ -290,29 +290,52 @@ void oglPlot::_DrawSeries(int id)
 			if (y > a)
 				y = 0;
 		}
+		
+#ifdef USE_LEGACY_MANUAL
 
 		// Draw lines
 		if (ly > 0)
 		{
 			vec3 c = m_series[id].m_color;
-			//glColor3f(c.r, c.g, c.b);
-
-			//glBegin(GL_LINES);
+			glColor3f(c.r, c.g, c.b);
+			glBegin(GL_LINES);
 
 			for (int i = 0; i < ly; i++)
 			{
-				vec2& v1 = m_lineArray[i];
-				//glVertex2f(v1.x, v1.y);
-
 				if (!((i + 1) >= ly))
 				{
+					vec2& v1 = m_lineArray[i];
 					vec2& v2 = m_lineArray[i + 1];
-					//glVertex2f(v2.x, v2.y);
+					glVertex2f(v1.x, v1.y);
+					glVertex2f(v2.x, v2.y);
 				}
 			}
 
-			//glEnd();
+			glEnd();
 		}
+#else
+
+		// Draw lines
+		if (ly > 0)
+		{
+			vec3 c = m_series[id].m_color;
+			//SDL_SetRenderDrawColor(renderer, 0xFF * c.r, 0xFF * c.g, 0xFF * c.b, 0xFF);
+			SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
+
+			for (int i = 0; i < ly; i++)
+			{
+				if (!((i + 1) >= ly))
+				{
+					vec2& v1 = m_lineArray[i];
+					vec2& v2 = m_lineArray[i + 1];
+					SDL_RenderDrawLine(renderer, v1.x, v1.y, v2.x, v2.y);
+				}
+			}
+		}
+#endif
+
+
+
 	}
 }
 

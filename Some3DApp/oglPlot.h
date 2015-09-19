@@ -1,15 +1,23 @@
 #pragma once
 
-#define GL_GLEXT_PROTOTYPES
-#define EGL_EGLEXT_PROTOTYPES
+//#define GL_GLEXT_PROTOTYPES
+//#define EGL_EGLEXT_PROTOTYPES
+//#define USE_LEGACY_MANUAL
+
+#include "SDL/SDL.h"
 
 #if __EMSCRIPTEN__
 #include <stdio.h>
 #include <stdlib.h>
+//#include <emscripten/emscripten.h>
+//#include <emscripten/html5.h>
 #include <emscripten.h>
+//#include <html5.h>
+#include "SDL/SDL_opengl.h"
 #else
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+#include "GL/glew.h"
 #endif
 
 #include <string>
@@ -21,6 +29,9 @@
 //#include <GL/glut.h>
 //#include <GLES2/gl2.h>
 //#include <EGL/egl.h>
+
+
+
 
 
 //#define HIGH_PRECISION
@@ -50,6 +61,14 @@ typedef float real;
 #include "glm/glm.hpp"
 
 using namespace glm;
+
+static SDL_Window *window = NULL;
+static SDL_Surface *screen_surface = NULL;
+static SDL_Surface *png_surface = NULL;
+static SDL_Texture *texture = NULL;
+static SDL_Texture *ball_texture = NULL;
+
+static SDL_GLContext mainContext;
 
 
 enum TimeMode
@@ -278,4 +297,6 @@ public:
 	// Font?
 	real m_zoom;
 	int m_textHeight;
+
+	SDL_Renderer *renderer;
 };

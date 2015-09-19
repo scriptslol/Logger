@@ -9,7 +9,7 @@
 inline double TimeUtility::GetTime()
 {
 #if __EMSCRIPTEN__
-	return emscripten_get_now();
+	return emscripten_get_now() * 0.001;
 #else
 	return TimeUtility::TicksToSeconds(SystemClock::GetTickCounter());
 #endif
