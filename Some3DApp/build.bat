@@ -1,1 +1,0 @@
-emcc main.cpp oglPlot.cpp TimeUtility.cpp -s USE_SDL=2 -o hello.html
