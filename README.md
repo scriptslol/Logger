@@ -64,3 +64,7 @@ The pattern of 3 (API, Behavior, Data) can be applied orthogonally to itself. Be
 I specifically authored this library to quickly drop in a means to profile a game I was working on. The issue we were tracking had to do with the amount of calls coming in/out of the Lua VM. As you can see in the picture, FPS reguarly fellt to high 40 FPS once the game started playing.
   
 This tool helped me build consensus through verifiable correlation. As a byproduct; it verified the the fixed tick rate simulation was "mostly" consistent. It's very easy to see where the major issues in hitches is during gameplay and therefore a little easier to track down.
+
+The twist? if I had implemented the Logger in plainview of the other programmers on the project; it would have taken much longer to accomplish the task of collecting data and moving on. There are varrying degrees of this being an appropriate approach... I believe a business can only be viable if _any invocable logic can be redirected with a stream_, otherwise... code is just a liability. The only thing that should matter is a clean user experience. Only get sweaty over code that **deserves** such attention.
+
+Until then, seek questions and find answers.
