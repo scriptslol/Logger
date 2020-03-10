@@ -20,10 +20,10 @@ This is the formulae I'm settling on:
     UX = API( Behavior (Data) )
 
 Where:
- `Data` = A stream of input
- `Behavior` = A black-box process the Data flows into based on scalability protocols
- `API` = A well communicated and accessible means for accomplishing your task
- `UX` = A stream of output; both "ah that's a fun game" to "the software made my computer blue screen!"
+- `Data` = A stream of input
+- `Behavior` = A black-box process the Data flows into based on scalability protocols
+- `API` = A well communicated and accessible means for accomplishing your task
+- `UX` = A stream of output; both "ah that's a fun game" to "the software made my computer blue screen!"
 
 Note:
 - UX is a constantly moving target, refining the API helps engineers; refining the Behavior _may or may not_ help both engineers and users (players)
