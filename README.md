@@ -17,7 +17,7 @@ More recently, I've been very focused on collapsing what i've learned into somet
 
 This is the formulae I'm settling on:
   
-  UX = API( Behavior (Data) )
+    UX = API( Behavior (Data) )
 
 Where:
  `Data` = A stream of input
@@ -39,23 +39,23 @@ The pattern of 3 (API, Behavior, Data) can be applied orthogonally to itself. Be
 
 ## Logger API Specification
 
-  // dumps the log as a D3.js graph
-  void  GenerateLogs
+    // dumps the log as a D3.js graph
+    void  GenerateLogs
   
-  // marks a named variable in the log, default time is "now"
-  void  LogVariable     name:string, variable:double, time:double=0
+    // marks a named variable in the log, default time is "now"
+    void  LogVariable     name:string, variable:double, time:double=0
   
-  // marks a named function in the log, default time is "now"
-  void  LogFuncCall     name:string, called:double=1, time:double=0
+    // marks a named function in the log, default time is "now"
+    void  LogFuncCall     name:string, called:double=1, time:double=0
   
-  // marks a named event in the log, default time is "now"
-  void  LogEvent        name:string, time:double=0
+    // marks a named event in the log, default time is "now"
+    void  LogEvent        name:string, time:double=0
   
-  // appends to a stream of funcName
-  void  RecordFuncCall  name:string
+    // appends to a stream of funcName
+    void  RecordFuncCall  name:string
   
-  // appends to a stream of named variables
-  void  RecordVariable  name:string, value:double
+    // appends to a stream of named variables
+    void  RecordVariable  name:string, value:double
   
 ## Example Output
 **insert pictures**
