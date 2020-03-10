@@ -58,7 +58,7 @@ The pattern of 3 (API, Behavior, Data) can be applied orthogonally to itself. Be
     void  RecordVariable  name:string, value:double
   
 ## Example Output
-**insert pictures**
+![alt text](https://raw.githubusercontent.com/scriptslol/Logger/master/image.png "D3.js Graphs")
 
 ## Context
 I specifically authored this library to quickly drop in a means to profile a game I was working on. The issue we were tracking had to do with the amount of calls coming in/out of the Lua VM. As you can see in the picture, FPS reguarly fellt to high 40 FPS once the game started playing.
